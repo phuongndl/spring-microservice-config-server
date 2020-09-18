@@ -1,0 +1,38 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active:
+    - native
+  application:
+    name: 'config-server'
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+          - file:////Users/thangnguyen/development/tutorial/microservice/spring-microservice-config-server-repo/auth
+          - file:////Users/thangnguyen/development/tutorial/microservice/spring-microservice-config-server-repo/book
+          - file:////Users/thangnguyen/development/tutorial/microservice/spring-microservice-config-server-repo/order
+        git:
+          uri: https://github.com/mupezzuol/spring-microservice-config-server-repo
+          search-paths:
+          - auth
+          - book
+          - order
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+  endpoint:
+    health:
+      show-details: always
