@@ -16,7 +16,7 @@ spring:
           - file:////Users/thangnguyen/development/tutorial/microservice/spring-microservice-config-server-repo/book
           - file:////Users/thangnguyen/development/tutorial/microservice/spring-microservice-config-server-repo/order
         git:
-          uri: https://github.com/mupezzuol/spring-microservice-config-server-repo
+          uri: https://github.com/phuongndl/spring-microservice-config-server-repo.git
           search-paths:
           - auth
           - book
